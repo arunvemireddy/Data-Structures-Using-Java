@@ -6,9 +6,7 @@ public class MyLinkedList {
 	private Node head;
 	
 	public void insert(int data) {
-		Node newNode = new Node();
-		newNode.data = data;
-		newNode.next = null;
+		Node newNode = new Node(data);
 		if(head == null) {
 			head = newNode;
 		}else {
@@ -22,18 +20,21 @@ public class MyLinkedList {
 	
 	public void display() {
 		Node node = head;
-		while(node.next!=null) {
-			System.out.println(node.data);
+		while(node!=null) {
+			System.out.println("element in the node is\s"+node.data);
 			node = node.next;
 		}
-		System.out.println(node.data);
 	}
 	
 	public static void main(String[] args) {
 		MyLinkedList myLinkedList = new MyLinkedList();
-		for(int i =1;i<5;i++) {
-			myLinkedList.insert(i);
-		}
+		myLinkedList.insert(50);
+		myLinkedList.insert(30);
+		myLinkedList.insert(70);
+		myLinkedList.insert(20);
+		myLinkedList.insert(40);
+		myLinkedList.insert(60);
+		myLinkedList.insert(80);
 		myLinkedList.display();
 	}
 
