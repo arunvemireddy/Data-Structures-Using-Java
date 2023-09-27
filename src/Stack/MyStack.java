@@ -1,5 +1,7 @@
 package Stack;
 
+// Last in First out - LIFO
+
 public class MyStack {
 	
 	private int maxSize;
